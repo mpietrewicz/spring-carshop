@@ -4,8 +4,11 @@ public class Operator {
 
 	CarShop carShop;
 
+	public void setCarShop(CarShop carShop) {
+		this.carShop = carShop;
+	}
+
 	public void prepareData() {
-		carShop = new CarShop();
 		for (int i = 0; i < 5; i++) {
 			Car car = new Car();
 			car.setMake("Fiat");
