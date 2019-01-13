@@ -10,17 +10,33 @@
     <context:annotation-config/>
     <context:component-scan base-package="pl.kurs"/>
 
-    <bean id="owner" class="pl.kurs.Owner">
+    <bean id="owner1" class="pl.kurs.Owner">
         <property name="name" value="Adam Kowalski (spring)"/>
     </bean>
 
-    <bean id="carShop" class="pl.kurs.CarShop">
-        <property name="owner" ref="owner"/>
+    <bean id="owner2" class="pl.kurs.Owner" primary="true">
+        <property name="name" value="Anna Nowak (spring)"/>
+    </bean>
+
+    <bean autowire="byType" id="carShopBMW" class="pl.kurs.CarShop">
+        <!--<property name="owner" ref="owner1"/>-->
         <property name="name" value="Salon BMW (spring)"/>
     </bean>
 
-    <bean id="operator" class="pl.kurs.Operator">
-        <property name="carShop" ref="carShop"/>
+    <bean autowire="byType" id="carShopAUDI" class="pl.kurs.CarShop">
+        <!--<property name="owner" ref="owner2"/>-->
+        <property name="name" value="Salon AUDI (spring)"/>
+    </bean>
+
+    <bean autowire="byType" id="operator" class="pl.kurs.Operator">
+        <!--
+        <property name="carShops">
+            <list>
+                <ref bean="carShopBMW"/>
+                <ref bean="carShopAUDI"/>
+            </list>
+        </property>
+        -->
     </bean>
 
 </beans>
