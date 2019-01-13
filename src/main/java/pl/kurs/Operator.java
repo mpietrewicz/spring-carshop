@@ -11,8 +11,8 @@ public class Operator {
 	public void prepareData() {
 		for (int i = 0; i < 5; i++) {
 			Car car = new Car();
-			car.setMake("Fiat");
-			car.setModel("Panda" + i);
+			car.setMake("BMW");
+			car.setModel("seria " + (i+1));
 			car.setPrice(1000 + i);
 			carShop.addCar(car);
 		}
