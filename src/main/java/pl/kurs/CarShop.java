@@ -8,13 +8,7 @@ import java.util.List;
 
 @Getter @Setter
 public class CarShop {
-
-	public CarShop() {
-		owner = new Owner();
-		owner.setName("Adam Kowalski");
-	}
-
-	private String name = "Salon nr 1";
+	private String name;
 	private Owner owner;
 	private List<Car> cars = new ArrayList<Car>();
 
