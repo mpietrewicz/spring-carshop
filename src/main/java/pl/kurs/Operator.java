@@ -1,12 +1,10 @@
 package pl.kurs;
 
+import lombok.Setter;
+
+@Setter
 public class Operator {
-
 	CarShop carShop;
-
-	public void setCarShop(CarShop carShop) {
-		this.carShop = carShop;
-	}
 
 	public void prepareData() {
 		for (int i = 0; i < 5; i++) {
