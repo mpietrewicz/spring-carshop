@@ -28,7 +28,7 @@
         <property name="name" value="Salon AUDI (spring)"/>
     </bean>
 
-    <bean id="operator" class="pl.kurs.Operator">
+    <bean id="operator2" class="pl.kurs.Operator2">
         <property name="carShops">
             <list>
                 <ref bean="carShopBMW"/>
@@ -37,7 +37,7 @@
         </property>
     </bean>
 
-    <bean id="car" class="pl.kurs.Car">
+    <bean id="car" class="pl.kurs.Car" scope="prototype">
         <property name="make" value="xxx"/>
         <property name="model" value="33"/>
     </bean>
