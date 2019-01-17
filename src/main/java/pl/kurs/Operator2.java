@@ -1,22 +1,29 @@
 package pl.kurs;
 
 import lombok.Setter;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 
 import java.util.List;
 
 @Setter
-public class Operator {
+public class Operator2 extends Operator implements ApplicationContextAware {
 	List<CarShop> carShops;
+	ApplicationContext context;
 
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		context = applicationContext;
+	}
+
+	@Override
 	public void prepareData() {
 		for (CarShop carShop : carShops) {
 			for (int i = 0; i < 5; i++) {
-				Car car = new Car();
-				car.setMake("BMW");
-				car.setModel("seria " + (i+1));
+				Car car = context.getBean("car", Car.class);
 				car.setPrice(1000 + i);
 				carShop.addCar(car);
-				System.out.println("prepareData BMW seria" + (i+1));
 			}
 		}
 	}
@@ -29,5 +36,6 @@ public class Operator {
 			}
 		}
 	}
+
 
 }

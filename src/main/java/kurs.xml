@@ -23,20 +23,23 @@
         <property name="name" value="Salon BMW (spring)"/>
     </bean>
 
-    <bean autowire="byType" id="carShopAUDI" class="pl.kurs.CarShop">
-        <!--<property name="owner" ref="owner2"/>-->
+    <bean id="carShop2" class="pl.kurs.CarShop">
+        <property name="owner" ref="owner2"/>
         <property name="name" value="Salon AUDI (spring)"/>
     </bean>
 
-    <bean autowire="byType" id="operator" class="pl.kurs.Operator">
-        <!--
+    <bean id="operator" class="pl.kurs.Operator">
         <property name="carShops">
             <list>
                 <ref bean="carShopBMW"/>
-                <ref bean="carShopAUDI"/>
+                <ref bean="carShop2"/>
             </list>
         </property>
-        -->
+    </bean>
+
+    <bean id="car" class="pl.kurs.Car">
+        <property name="make" value="xxx"/>
+        <property name="model" value="33"/>
     </bean>
 
 </beans>
