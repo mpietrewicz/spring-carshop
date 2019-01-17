@@ -1,10 +1,11 @@
 package pl.kurs;
 
+import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
 
-@Setter
+@Getter @Setter
 public class Operator {
 	List<CarShop> carShops;
 

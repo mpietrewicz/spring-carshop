@@ -14,12 +14,12 @@
         <property name="name" value="Adam Kowalski (spring)"/>
     </bean>
 
-    <bean id="owner2" class="pl.kurs.Owner" primary="true">
-        <property name="name" value="Anna Nowak (spring)"/>
+    <bean id="owner2" class="pl.kurs.Owner" primary="true" scope="prototype">
+        <property name="name" value="Anna Nowak x (spring)"/>
     </bean>
 
-    <bean autowire="byType" id="carShopBMW" class="pl.kurs.CarShop">
-        <!--<property name="owner" ref="owner1"/>-->
+    <bean id="carShopBMW" class="pl.kurs.CarShop">
+        <property name="owner" ref="owner2"/>
         <property name="name" value="Salon BMW (spring)"/>
     </bean>
 
