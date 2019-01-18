@@ -8,4 +8,7 @@ public class Owner {
 	String name;
 	String address;
 
+    void init() {
+        System.out.println("init bean'a, name " +name);
+    }
 }
