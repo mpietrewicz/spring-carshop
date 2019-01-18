@@ -13,8 +13,8 @@
     <context:annotation-config/>
     <context:component-scan base-package="pl.kurs"/>
 
-
-    <bean id="car" class="pl.kurs.PrintableFactory" factory-method="getPrintable">
-    </bean>
+    <bean id="pfactory" class="pl.kurs.PrintableFactory"></bean>
+    <bean id="car" class="pl.kurs.PrintableFactory" factory-method="getPrintable"
+          factory-bean="pfactory"></bean>
 
 </beans>

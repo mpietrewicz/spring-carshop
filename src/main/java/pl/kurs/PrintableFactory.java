@@ -2,7 +2,7 @@ package pl.kurs;
 
 public class PrintableFactory {
 
-    public static Printable getPrintable() {
+    public Printable getPrintable() {
         return new SuperCar();
     }
 
