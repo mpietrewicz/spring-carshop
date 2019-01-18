@@ -17,9 +17,7 @@
         <property name="name" value="Adam Kowalski (spring)"/>
     </bean>
 
-    <bean id="owner2" class="pl.kurs.Owner" primary="true" scope="prototype">
-        <property name="name" value="Anna Nowak x (spring)"/>
-    </bean>
+    <bean id="owner2" class="pl.kurs.Owner" primary="true" scope="prototype"/>
 
     <bean id="carShopBMW" class="pl.kurs.CarShop">
         <property name="owner" ref="owner2"/>
