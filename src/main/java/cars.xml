@@ -13,28 +13,10 @@
     <context:annotation-config/>
     <context:component-scan base-package="pl.kurs"/>
 
-    <bean id="owner1" class="pl.kurs.Owner">
-        <property name="name" value="Adam Kowalski (spring)"/>
-    </bean>
 
-    <bean id="owner2" class="pl.kurs.Owner" primary="true" scope="prototype">
-        <property name="name" value="Anna Nowak x (spring)"/>
+    <bean id="car" class="pl.kurs.Car" scope="prototype">
+        <property name="make" value="MMM"/>
+        <property name="model" value="44"/>
     </bean>
-
-    <bean id="carShopBMW" class="pl.kurs.CarShop">
-        <property name="owner" ref="owner2"/>
-        <property name="name" value="Salon BMW (spring)"/>
-    </bean>
-
-    <bean id="carShop2" class="pl.kurs.CarShop">
-        <property name="owner" ref="owner2"/>
-        <property name="name" value="Salon AUDI (spring)"/>
-    </bean>
-
-    <bean autowire="byType" id="operator3" class="pl.kurs.Operator3">
-        <lookup-method name="createCar" bean="car"/>
-    </bean>
-
-    <import resource="cars.xml"/>
 
 </beans>
