@@ -1,5 +1,6 @@
 package pl.kurs;
 
+import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
@@ -17,7 +18,7 @@ public class CarShopConfiguration {
     public Car car(@Value("${car.make}") String make, @Value("${car.model}") String model) {
         Car car = new Car();
         car.setMake(make);
-        car.setModel(model);
+        car.setModel("A3");
         return car;
     }
 
