@@ -17,7 +17,6 @@ public class Operator {
 				car.setModel("seria " + (i+1));
 				car.setPrice(1000 + i);
 				carShop.addCar(car);
-				System.out.println("prepareData BMW seria" + (i+1));
 			}
 		}
 	}

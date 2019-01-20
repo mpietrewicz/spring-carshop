@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-public class Car implements Printable{
+public class Car {
 	String make;
 	String model;
 	double price;
