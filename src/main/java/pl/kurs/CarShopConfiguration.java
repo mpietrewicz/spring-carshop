@@ -7,6 +7,7 @@ import org.springframework.context.annotation.*;
 @Configuration
 @ComponentScan(basePackages="pl.kurs")
 @PropertySource("app.properties")
+@EnableAspectJAutoProxy(proxyTargetClass=true)
 public class CarShopConfiguration {
 
     @Bean
