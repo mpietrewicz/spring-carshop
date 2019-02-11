@@ -9,7 +9,8 @@ public class Start {
 		ApplicationContext context = new AnnotationConfigApplicationContext(CarShopConfiguration.class);
 
 		Operator3 operator = context.getBean("operator3", Operator3.class);
-		operator.prepareData();
+		operator.prepareData("test", 3, 1500.0);
+//		operator.prepareData(null, 3, 1500.0);
 		operator.printData();
 
 	}

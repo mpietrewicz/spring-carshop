@@ -13,6 +13,18 @@ public class Operator {
 	@Autowired
 	List<CarShop> carShops;
 
+	public void prepareData(String make, int ile, double cena) {
+		for(CarShop carShop:carShops) {
+			for(int i=0; i<ile; i++) {
+				Car car = new Car();
+				car.setMake(make);
+				car.setModel(make+i);
+				car.setPrice(cena+i);
+				carShop.addCar(car);
+			}
+		}
+	}
+
 	public void prepareData() {
 		for (CarShop carShop : carShops) {
 			for (int i = 0; i < 5; i++) {
